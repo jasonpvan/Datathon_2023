@@ -14,10 +14,8 @@ void Age(vector<vector<string> >mat,vector<vector<string> >&met){
             for(int j=0; j<7; ++j){
                 if(mat[i][3]=="Kids"){
                     met[i][j]=mat[i][j];
-                    cout<< met[i][j]<<" ";
                 }
             }
-            cout<<endl;
         }
     }
     else if(Kid_Adult == "Adult"){
@@ -26,10 +24,8 @@ void Age(vector<vector<string> >mat,vector<vector<string> >&met){
             for(int j=0; j<7; ++j){
                 if(mat[i][3]=="Adult"){
                     met[i][j]=mat[i][j];
-                    cout<< met[i][j]<<" ";
                 }
             }
-            cout<<endl;
         }
     }
 }
@@ -45,10 +41,8 @@ void Sex(vector<vector<string> >mat,vector<vector<string> >&met){
             for(int j=0; j<7; ++j){
                 if(mat[i][2]=="Male"){
                     met[i][j]=mat[i][j];
-                    cout<< met[i][j]<<" ";
                 }
             }
-            cout<<endl;
         }
     }
     else if(Women_Man == "Women"){
@@ -57,10 +51,8 @@ void Sex(vector<vector<string> >mat,vector<vector<string> >&met){
             for(int j=0; j<7; ++j){
                 if(mat[i][2]=="Female"){
                     met[i][j]=mat[i][j];
-                    cout<< met[i][j]<<" ";
                 }
             }
-            cout<<endl;
         }
     }
 }
@@ -72,8 +64,9 @@ int main(){
     vector<vector<string> > mat(9222, vector<string>(7));
     vector<vector<string> >sex(9222, vector<string>(7));
     vector<vector<string> >age(9222, vector<string>(7));
-    for(int i=0; i<9222; i++){
-        for (int g=0; g<7;g++){
+    vector<vector<string> >sortAgeSex(9222, vector<string>(7));
+    for(int i=0; i<9222; ++i){
+        for (int g=0; g<7;++g){
             Data>>Comodin;
             mat[i][g]=Comodin;
             //cout<< mat[i][g]<<" ";
@@ -81,8 +74,17 @@ int main(){
     }
     Sex(mat,sex);
     Age(mat,age);
-
+    for(int i=0;i<9222; ++i){
+        for (int g=0; g<7;++g){
+            if(sex[i][g]==age[i][g]){
+                sortAgeSex[i][g]=sex[i][g];
+                cout<<sortAgeSex[i][g]<<" ";
+            }
+    }
+    cout<<endl;
     //Fa una purga dels gustos de la persona
+}
+
 }
 
 
