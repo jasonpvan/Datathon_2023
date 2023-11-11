@@ -8,11 +8,11 @@ void Age(vector<vector<string> >mat,vector<vector<string> >&met){
     string Kid_Adult;
     cout << "Kid or Adult? ";
     cin >> Kid_Adult;
-    if (Kid_Adult == "Kid"){
+    if (Kid_Adult == "Kids"){
         //Solo deja las opciones con Adult
         for(int i=0; i<9222; ++i){
             for(int j=0; j<7; ++j){
-                if(mat[i][3]=="Kid"){
+                if(mat[i][3]=="Kids"){
                     met[i][j]=mat[i][j];
                 }
             }
