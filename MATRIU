@@ -6,12 +6,12 @@ using namespace std;
 int main(){
   string Comodin;
   ifstream Data("product_data.txt");
-  vector<vector<string> > mat(9222, vector<string>(13));
+  vector<vector<string> > mat(9222, vector<string>(12));
     for(int i=0; i<9222; i++){
-        for (int g=0; g<13;g++){
+        for (int g=0; g<12;g++){
                 Data>>Comodin;
                 mat[i][g]=Comodin;
-                cout << mat[i][g]<<" ";
             }
         }
     }
+
