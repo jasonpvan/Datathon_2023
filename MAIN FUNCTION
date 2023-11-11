@@ -1,9 +1,0 @@
-#include<iostream>
-#include<fstream>
-#include<vector>
-using namespace std;
-  string ID,n.Color, C.E, C.A, Sexo,Edat,Linia,Material,Tipos,Familia.G,Familia.P,Tipus.X;
-
-int main{
-
-}
