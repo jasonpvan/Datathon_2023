@@ -1,10 +1,26 @@
-Orange
-Blue
-Red
-White
-Grey
-Green
-Pink
+#include<iostream>
+using namespace std;
+
+int main(){
+  vector<string> cal(
+}
+
+
+
+
+
+
 Yellow
 Brown
+Red
+Orange
+
+Grey
+Blue
 Purple
+
+White
+
+Green
+Pink
+
