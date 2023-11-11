@@ -12,7 +12,7 @@ void Age(vector<vector<string> >mat,vector<vector<string> >&met){
         //Solo deja las opciones con Adult
         for(int i=0; i<9222; ++i){
             for(int j=0; j<7; ++j){
-                if(mat[i][3]=="Kids"){
+                if(mat[i][3]=="Kid"){
                     met[i][j]=mat[i][j];
                 }
             }
@@ -45,7 +45,7 @@ void Sex(vector<vector<string> >mat,vector<vector<string> >&met){
             }
         }
     }
-    else if(Women_Man == "Women"){
+    else if(Women_Man == "Female"){
         //Solo deja las opciones con Adult
         for(int i=0; i<9222; ++i){
             for(int j=0; j<7; ++j){
