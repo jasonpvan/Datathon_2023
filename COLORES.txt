@@ -2,25 +2,19 @@
 using namespace std;
 
 int main(){
-  vector<string> cal(
+  vector<string> cal(3);
+  vector<string> frd(4);
+  vector<string> resta(3);
+  cal[0] = Yellow;
+  cal[1] = Red;
+  cal[2] = Orange;
+  frd[0] = Grey;
+  frd[1] = Blue;
+  frd[2] = Purple;
+  frd[3] = Pink;
+  resta[0] = White;
+  resta[1] = Green;
+  resta[2] = Brown;
+
+
 }
-
-
-
-
-
-
-Yellow
-Brown
-Red
-Orange
-
-Grey
-Blue
-Purple
-
-White
-
-Green
-Pink
-
