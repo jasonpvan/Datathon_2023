@@ -3,23 +3,65 @@
 #include <vector>
 using namespace std;
 
-void Sex(vector<vector<string>>mat){
+void Age(vector<vector<string> >mat,vector<vector<string> >&met){
     //Preguntas para eliminar elementos de la matriz
-    string Male_Female_Unisex;
-    cout << "Male or female?";
-    cin >> Male_Female_Unisex;
-    for(int i=0; i<10; i++){
-        for (int g=0; g<7;g++){
-            cout<< mat[i][g]<<" ";
+    string Kid_Adult;
+    cout << "Kid o Adult? ";
+    cin >> Kid_Adult;
+    if (Kid_Adult == "Kid"){
+        //Solo deja las opciones con Adult
+        for(int i=0; i<9222; ++i){
+            for(int j=0; j<7; ++j){
+                if(mat[i][3]=="Kids"){
+                    met[i][j]=mat[i][j];
+                    cout<< met[i][j]<<" ";
+                }
+            }
+            cout<<endl;
         }
-    cout<<endl;
     }
-    if (Male_Female_Unisex == "Male"){
-        //Solo deja las opciones con Male y Unisex
-        cout << "Hola";
-    } else {
-        cout << "Adiós";
-        //Solo deja las opciones con Female y Unisex
+    else if(Kid_Adult == "Adult"){
+        //Solo deja las opciones con Adult
+        for(int i=0; i<9222; ++i){
+            for(int j=0; j<7; ++j){
+                if(mat[i][3]=="Adult"){
+                    met[i][j]=mat[i][j];
+                    cout<< met[i][j]<<" ";
+                }
+            }
+            cout<<endl;
+        }
+    }
+}
+
+void Sex(vector<vector<string> >mat,vector<vector<string> >&met){
+    //Preguntas para eliminar elementos de la matriz
+    string Women_Man;
+    cout << "Women or Man? ";
+    cin >> Women_Man;
+    if (Women_Man == "Man"){
+        //Solo deja las opciones con Adult
+        for(int i=0; i<9222; ++i){
+            for(int j=0; j<7; ++j){
+                if(mat[i][2]=="Male"){
+                    met[i][j]=mat[i][j];
+                    cout<< met[i][j]<<" ";
+                }
+            }
+            cout<<endl;
+        }
+    }
+    else if(Women_Man == "Women"){
+        //Solo deja las opciones con Adult
+        for(int i=0; i<9222; ++i){
+            for(int j=0; j<7; ++j){
+                if(mat[i][2]=="Female"){
+                    met[i][j]=mat[i][j];
+                    cout<< met[i][j]<<" ";
+                }
+            }
+            cout<<endl;
+        }
     }
 }
 
@@ -27,19 +69,20 @@ int main(){
     //Legeix la matriu de les peces de roba
     string Comodin;
     ifstream Data("PRODUCTO_DATA_BUENO.txt");
-    vector<vector<string> > mat(10, vector<string>(7));
-    for(int i=0; i<10; i++){
+    vector<vector<string> > mat(9222, vector<string>(7));
+    vector<vector<string> >sex(9222, vector<string>(7));
+    vector<vector<string> >age(9222, vector<string>(7));
+    for(int i=0; i<9222; i++){
         for (int g=0; g<7;g++){
             Data>>Comodin;
             mat[i][g]=Comodin;
             //cout<< mat[i][g]<<" ";
         }
-    cout<<endl;
     }
-    Sex(mat);
+    Sex(mat,sex);
+    Age(mat,age);
+
     //Fa una purga dels gustos de la persona
-    
-    
 }
 
 
