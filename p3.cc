@@ -6,7 +6,7 @@ using namespace std;
 void Age(vector<vector<string> >mat,vector<vector<string> >&met){
     //Preguntas para eliminar elementos de la matriz
     string Kid_Adult;
-    cout << "Kid o Adult? ";
+    cout << "Kid or Adult? ";
     cin >> Kid_Adult;
     if (Kid_Adult == "Kid"){
         //Solo deja las opciones con Adult
@@ -33,7 +33,7 @@ void Age(vector<vector<string> >mat,vector<vector<string> >&met){
 void Sex(vector<vector<string> >mat,vector<vector<string> >&met){
     //Preguntas para eliminar elementos de la matriz
     string Women_Man;
-    cout << "Women or Man? ";
+    cout << "Female or Man? ";
     cin >> Women_Man;
     if (Women_Man == "Man"){
         //Solo deja las opciones con Adult
