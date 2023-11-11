@@ -1,13 +1,12 @@
-void Matriu(){
+int main(){
   string Comodin;
-  int i=0;
   ifstream Data("product_data.txt");
-  vector<vector<string>> mat(9222, vector<string>(13));
-  while(Data>>Comodin){
-    mat[i][Comodin];
-    i++;
-    if(i==13){
-     i=0;
+  vector<vector<string> > mat(9222, vector<string>(13));
+    for(int i=0; i<9222; i++){
+        for (int g=0; g<13;g++){
+                Data>>Comodin;
+                mat[i][g]=Comodin;
+                cout << mat[i][g]<<" ";
+            }
+        }
     }
-  }
-}
