@@ -25,11 +25,11 @@ void color(const vector<vector<string>>mat, vector<vector<string>>&meth){
   resta[2] = Brown;
   
   //input
-  cout << "càlid, fred o altres?" << endl;
+  cout << "calid, fred o altres?" << endl;
   string color;
   cin >> color;
   vector<string> aux;
-  if(color == "càlid") aux = cal;
+  if(color == "calid") aux = cal;
   if(color == "fred") aux = frd;
   else aux = resta;
   int f = mat.size();
