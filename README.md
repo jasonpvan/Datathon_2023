@@ -9,7 +9,7 @@ Outfit_Visualization.ipynb: Notebook para visualizar las imagenes
 
 Fotos Outfits: Recopilatorio de outfits generados
 
-#Como Ejecutar
+# Como Ejecutar
 Para ejecutar el codigo, se debe utilizar el archivo Main.exe junto a la base de datos P_ducto.txt.
 
 Nos dará un archivo de texto el qual se tiene que subir al Notebook para poder visualizar las imagenes.
