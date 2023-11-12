@@ -4,22 +4,22 @@
 using namespace std;
 
 void color(const vector<vector<string>>mat, vector<vector<string>>&meth){
-  vector<string> cal(3);
-  vector<string> frd(4);
-  vector<string> resta(3);
   string Yellow, Red, Orange, Grey, Blue, Purple, Pink, White, Green, Brown;
   //colors càlids
+  vector<string> cal(3);
   cal[0] = Yellow;
   cal[1] = Red;
   cal[2] = Orange;
   
   //colors freds
+  vector<string> frd(4);
   frd[0] = Grey;
   frd[1] = Blue;
   frd[2] = Purple;
   frd[3] = Pink;
   
   //altres colors
+  vector<string> resta(3);
   resta[0] = White;
   resta[1] = Green;
   resta[2] = Brown;
