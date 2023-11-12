@@ -3,7 +3,7 @@
 #include<vector>
 using namespace std;
 
-void color(const vector<vector<string>>mat, vector<vector<string>>&meth){
+void color(const vector<vector<string> >mat, vector<vector<string> >&meth){
   string Yellow, Red, Orange, Grey, Blue, Purple, Pink, White, Green, Brown;
   //colors càlids
   vector<string> cal(3);
@@ -55,6 +55,6 @@ int main(){
     string Comodin;
     ifstream Data("PRODUCTO_DATA_BUENO.txt");
     vector<vector<string> > mat(9222, vector<string>(7));
-    vector<vector<string>> meth;
+    vector<vector<string> > meth;
     color(mat, meth);
 }
