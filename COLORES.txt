@@ -7,16 +7,24 @@ void color(const vector<vector<string>>mat, vector<vector<string>>&meth){
   vector<string> cal(3);
   vector<string> frd(4);
   vector<string> resta(3);
+  string Yellow, Red, Orange, Grey, Blue, Purple, Pink, White, Green, Brown;
+  //colors càlids
   cal[0] = Yellow;
   cal[1] = Red;
   cal[2] = Orange;
+  
+  //colors freds
   frd[0] = Grey;
   frd[1] = Blue;
   frd[2] = Purple;
   frd[3] = Pink;
+  
+  //altres colors
   resta[0] = White;
   resta[1] = Green;
   resta[2] = Brown;
+  
+  //input
   cout << "càlid, fred o altres?" << endl;
   string color;
   cin >> color;
@@ -24,12 +32,11 @@ void color(const vector<vector<string>>mat, vector<vector<string>>&meth){
   if(color == "càlid") aux = cal;
   if(color == "fred") aux = frd;
   else aux = resta;
-  int f = mat_var.size();
-  int n = aux_var.size();
+  int f = mat.size();
+  int n = aux.size();
   int k = 0;
-  vector<vector<string>> meth();
   for(int i = 0; i < f; ++i){
-   for(j = 0; j < n; ++i){
+   for(int j = 0; j < n; ++i){
     if (mat[i][2] == aux[j]){
       for(int l = 0; l < 7; ++l){
         meth[k][l] = mat[i][l];
@@ -38,5 +45,16 @@ void color(const vector<vector<string>>mat, vector<vector<string>>&meth){
     } 
    }
   }
-  cout << meth[1][2] <<endl;
+  for(int i = 0; i < f; ++i){
+     cout << meth[i][2] <<endl;
+  }
+}
+
+int main(){
+    //Llegeix la matriu de les peces de roba
+    string Comodin;
+    ifstream Data("PRODUCTO_DATA_BUENO.txt");
+    vector<vector<string> > mat(9222, vector<string>(7));
+    vector<vector<string>> meth;
+    color(mat, meth);
 }
