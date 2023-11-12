@@ -1,7 +1,9 @@
 #include<iostream>
+#include<fstring>
+#include<vector>
 using namespace std;
 
-int main(){
+void color(const vector<vector<string>>mat, vector<vector<string>>&meth){
   vector<string> cal(3);
   vector<string> frd(4);
   vector<string> resta(3);
@@ -15,6 +17,28 @@ int main(){
   resta[0] = White;
   resta[1] = Green;
   resta[2] = Brown;
-
-
+  cout << "càlid, fred o altres?" << endl;
+  string color;
+  cin >> color;
+  vector<string> aux;
+  if(color == "càlid") aux = cal;
+  if(color == "fred") aux = frd;
+  else aux = resta;
+  int f = mat_var.size();
+  int n = aux_var.size();
+  int k = 0;
+  vector<vector<string>> meth();
+  for(int i = 0; i < f; ++i){
+   for(j = 0; j < n; ++i){
+    if (mat[i][2] == aux[j]){
+      for(int l = 0; l < 7; ++l){
+        meth[k][l] = mat[i][l];
+      }
+      ++k;
+    } 
+   }
+  }
+  for(int i = 0; i < 7; ++i){
+    
+  }
 }
